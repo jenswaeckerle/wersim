@@ -10,7 +10,8 @@ Maintainer: Jens Wäckerle <jens.waeckerle@uni-koeln.de>
 Description: The package contains three functions: one for measuring the word error rate
     of a text corpus, one for introducing additional word error into the corpus and one
     for running text models on the modified corpora.
-BugReports: https://github.com/yihui/knitr/issues
+BugReports: https://github.com/jenswaeckerle/wersim/issues
+URL: https://github.com/jenswaeckerle/wersim
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
