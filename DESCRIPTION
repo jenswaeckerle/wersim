@@ -1,0 +1,23 @@
+Package: wersim
+Type: Package
+Title: Simulating and Measuring Word Error
+Version: 0.1.0
+Authors@R: c(
+  person("Jens", "Wäckerle", email = "jens.waeckerle@uni-koeln.de", role = "cre"),
+  person("Sven-Oliver", "Proksch", email = "so.proksch@uni-koeln.de", role = "aut"),
+  person("Christopher", "Wratil", email = "c.wratil@uni-koeln.de", role = "aut"))
+Maintainer: Jens Wäckerle <jens.waeckerle@uni-koeln.de>
+Description: The package contains three functions: one for measuring the word error rate
+    of a text corpus, one for introducing additional word error into the corpus and one
+    for running text models on the modified corpora.
+BugReports: https://github.com/yihui/knitr/issues
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    RecordLinkage
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
