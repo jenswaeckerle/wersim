@@ -3,7 +3,7 @@ Type: Package
 Title: Simulating and Measuring Word Error
 Version: 0.1.0
 Authors@R: c(
-  person("Jens", "Wäckerle", email = "jens.waeckerle@uni-koeln.de", role = "cre"),
+  person("Jens", "Wäckerle", email = "jens.waeckerle@uni-koeln.de", role = c(„aut“, „cre“)),
   person("Sven-Oliver", "Proksch", email = "so.proksch@uni-koeln.de", role = "aut"),
   person("Christopher", "Wratil", email = "c.wratil@uni-koeln.de", role = "aut"))
 Maintainer: Jens Wäckerle <jens.waeckerle@uni-koeln.de>
@@ -12,6 +12,7 @@ Description: The package contains three functions: one for measuring the word er
     for running text models on the modified corpora.
 BugReports: https://github.com/jenswaeckerle/wersim/issues
 URL: https://github.com/jenswaeckerle/wersim
+Published: 2018-11-19
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

@@ -13,7 +13,7 @@ citEntry(entry = "Article",
   url          = „XX“,
 
   textVersion  =
-  paste(„Sven-Oliver proksch, Christopher Wratil and Jens Wäckerle (2018).“,
+  paste(„Sven-Oliver Proksch, Christopher Wratil and Jens Wäckerle (2018).“,
         "Testing the Validity of Automatic Speech Recognition for Political Text Analysis.",
         „Political Analysis, forthcoming")
 )
