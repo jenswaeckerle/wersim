@@ -1,19 +1,19 @@
 citHeader("To cite wersim in publications use:")
 
 citEntry(entry = "Article",
-  title        = „Testing the Validity of Automatic Speech Recognition for Political Text Analysis“,
-  author       = personList(as.person(„Sven-Oliver Proksch“),
-                   as.person(„Christopher Wratil“),
-		   as.person(„Jens Wäckerle“)),
-  journal      = „Political Analysis“,
-  year         = "2018“,
-  volume       = „XX“,
-  number       = „XX“,
-  pages        = „XX“,
-  url          = „XX“,
+  title        = "Testing the Validity of Automatic Speech Recognition for Political Text Analysis",
+  author       = personList(as.person("Sven-Oliver Proksch"),
+                   as.person("Christopher Wratil"),
+		   as.person("Jens Wäckerle")),
+  journal      = "Political Analysis",
+  year         = "2018",
+  volume       = "XX",
+  number       = "XX",
+  pages        = "XX",
+  url          = "XX",
 
   textVersion  =
-  paste(„Sven-Oliver Proksch, Christopher Wratil and Jens Wäckerle (2018).“,
+  paste("Sven-Oliver Proksch, Christopher Wratil and Jens Wäckerle (2018).",
         "Testing the Validity of Automatic Speech Recognition for Political Text Analysis.",
-        „Political Analysis, forthcoming")
+        "Political Analysis, forthcoming.“)
 )
