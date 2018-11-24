@@ -4,7 +4,7 @@ Title: Simulating and Measuring Word Error
 Version: 0.1.0
 Authors@R: as.person(c(
     "Jens Wäckerle <jens.waeckerle@uni-koeln.de> [aut, cre]", 
-    "Sven-Oliver Proksch <so.proksch@uni-koeln.de> [aut]“,
+    "Sven-Oliver Proksch <so.proksch@uni-koeln.de> [aut]",
     "Christopher Wratil <c.wratil@uni-koeln.de> [aut]"
   ))
 Maintainer: Jens Wäckerle <jens.waeckerle@uni-koeln.de>
