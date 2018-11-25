@@ -16,6 +16,8 @@
 #' name="doc1",stringsAsFactors = F)
 #' reference_corpus=quanteda::corpus(reference_data,docid_field = "name", text_field = "text")
 #' wer(r=reference_corpus,h=hypothesis_corpus)
+#' # One substitution ("meadoww" instead of "meadow"), one deletion ("is") and one insertion ("two")
+#' # Overall, this means there are three mistakes for ten reference words, giving a Word error rate of 0.3
 
 wer<-function(r,h){
   ##### Errors
