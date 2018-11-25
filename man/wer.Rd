@@ -11,11 +11,22 @@ wer(r, h)
 
 \item{h}{The hypothesis quanteda corpus}
 }
+\value{
+A dataframe containing the Word error rate, the number of
+substitutions, deletions and insertions and the number of words in the
+reference and hypothesis corpora for each text in the corpus.
+}
 \description{
-This function calculates the word error rate betwenn a hypothesis and a reference corpus.
+This function calculates the word error rate between a hypothesis and a reference corpus.
 }
 \examples{
-wer()
+hypothesis_data=data.frame(text="The meadoww very nice and the two sun shines bright",
+name="doc1",stringsAsFactors = F)
+hypothesis_corpus=quanteda::corpus(hypothesis_data,docid_field = "name", text_field = "text")
+reference_data=data.frame(text="The meadow is very nice and the sun shines bright",
+name="doc1",stringsAsFactors = F)
+reference_corpus=quanteda::corpus(reference_data,docid_field = "name", text_field = "text")
+wer(r=reference_corpus,h=hypothesis_corpus)
 }
 \keyword{error}
 \keyword{rate}

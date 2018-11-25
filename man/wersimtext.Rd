@@ -34,6 +34,9 @@ wersimtext(x, measured_wer, new_wer, deletions_sim = 0.13,
 
 \item{direction}{For Wordfish: The parameters that are forwarded to the dir command in Wordfish (fixing the direction of the space). Defaults to c(1,2).}
 }
+\value{
+A data frame with the grouping variable in column 1 and simulated quantities (sentiment or Wordfish estimates) in subsequent columns.
+}
 \description{
 This function calculates the word error rate between a hypothesis and a reference corpus.
 }
