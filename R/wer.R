@@ -5,8 +5,18 @@
 #' @param h The hypothesis quanteda corpus
 #' @keywords word error rate
 #' @export
+#' @return A dataframe containing the Word error rate, the number of
+#' substitutions, deletions and insertions and the number of words in the
+#' reference and hypothesis corpora for each text in the corpus.
 #' @examples
-#' wer()
+#' library(quanteda)
+#' hypothesis_data=data.frame(text="The meadoww very nice and the two sun shines bright",
+#' name="doc1",stringsAsFactors = F)
+#' hypothesis_corpus=corpus(hypothesis_data,docid_field = "name", text_field = "text")
+#' reference_data=data.frame(text="The meadow is very nice and the sun shines bright",
+#' name="doc1",stringsAsFactors = F)
+#' reference_corpus=corpus(reference_data,docid_field = "name", text_field = "text")
+#' wer(r=reference_corpus,h=hypothesis_corpus)
 
 wer<-function(r,h){
   ##### Errors
