@@ -8,9 +8,10 @@
 #' @param substitutions The share of word error that should be introduced through substitutions
 #' @param groupingvar The variable that groups the corpus
 #' @keywords word error rate wersim transcriptions
+#' @return Returns a quanteda dfm of the corpus with added error as specified.
 #' @export
 #' @examples
-#' wersim()
+#' # For an example, please see the documentation of the wersimtext function
 
 wersim<-function(x,target_wer=0.05,deletions=0.13,insertions=0.22,substitutions=0.65,groupingvar){
   ##### Errors
@@ -25,10 +26,6 @@ wersim<-function(x,target_wer=0.05,deletions=0.13,insertions=0.22,substitutions=
   # Add an error if error ratio doesn't add up to 1
   if (sum(c(deletions,insertions,substitutions))!=1)
     stop("all elements of error ratio must add up to 1")
-
-  # Add an error if RecordLinkage is not loaded
-  if(!"RecordLinkage" %in% (.packages()))
-    stop("Please load package 'RecordLinkage'")
 
   docvars(x,"id")=1:length(x$documents$texts)
   ids_save=unique(docvars(x,"id"))
