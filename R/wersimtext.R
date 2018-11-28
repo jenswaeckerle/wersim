@@ -17,7 +17,14 @@
 #' @export
 #' @return A data frame with the grouping variable in column 1 and simulated quantities (sentiment or Wordfish estimates) in subsequent columns.
 #' @examples
-#' wersimtext()
+#' library(RecordLinkage)
+#' library(quanteda)
+#' library(wersim)
+#' corp=corpus(data_corpus_dailnoconf1991)
+#' dfm_corp=dfm(corp,groups="party")
+#' wordfish_pos=austin::wordfish(quanteda::as.wfm(dfm_corp))
+#' wordfish_pos_res=data.frame("theta"=wordfish_pos$theta,"party"=wordfish_pos$docs)
+#' wersimulated_positions=wersimtext(corp,measured_wer=0,new_wer=0.05,deletions_sim=0.13,insertions_sim=0.22,substitutions_sim=0.65,num_sims=5,method="wordfish",groupingvar_sim="party")
 
 wersimtext=function(x,measured_wer,new_wer,deletions_sim=0.13,insertions_sim=0.22,substitutions_sim=0.65,num_sims,preprocessing=c("punctuation","numbers"),mincount_wersim=0,method,groupingvar_sim,direction=c(1,2)){
   how_much_wer_to_add=new_wer-measured_wer
