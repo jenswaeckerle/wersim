@@ -5,7 +5,7 @@
 #' @param h The hypothesis quanteda corpus
 #' @keywords word error rate
 #' @export
-#' @return A dataframe containing the Word error rate, the number of
+#' @return Returns a dataframe containing the Word error rate, the number of
 #' substitutions, deletions and insertions and the number of words in the
 #' reference and hypothesis corpora for each text in the corpus.
 #' @examples
