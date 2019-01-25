@@ -12,7 +12,7 @@ wer(r, h)
 \item{h}{The hypothesis quanteda corpus}
 }
 \value{
-A dataframe containing the Word error rate, the number of
+Returns a dataframe containing the Word error rate, the number of
 substitutions, deletions and insertions and the number of words in the
 reference and hypothesis corpora for each text in the corpus.
 }

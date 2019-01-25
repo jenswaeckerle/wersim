@@ -20,11 +20,28 @@ wersim(x, target_wer = 0.05, deletions = 0.13, insertions = 0.22,
 
 \item{groupingvar}{The variable that groups the corpus}
 }
+\value{
+Returns a quanteda dfm of the corpus with added error as specified.
+}
 \description{
-This function introduces word error into a corpus
+This function introduces word error into a corpus. We find word error to consist of three
+components: deletions (words that are missing in the ASR transcription),
+insertions (words in the ASR transcription that are not in the reference text)
+and substitutions (words with inaccurate ASR transcription). In the function, you have to specify
+the ratio between deletions, insertions and substitutions.
+As a baseline, for deletions D, we simply randomly draw a
+unique token from the corpus and delete it from a randomly chosen text it occurs in, and
+repeat this until we have reached ND number of deletions needed. In turn, for insertions I,
+we randomly select a token from the corpus and insert it in a text, repeating this NI times.
+Last, we create NS substitutions S by randomly selecting a unique token and replacing it
+with the token from the corpus that has the smallest Levenshtein distance (Levenshtein,1966)
+to the selected token, which measures the similarity between two strings on the basis
+of single-character differences, e.g. "bad" may be replaced by "bat". The random draw of the token
+for all three operations is weighted by the number of times the word occured in a specific text.
+This means that more common words in longer texts are more likely to be chosen.
 }
 \examples{
-wersim()
+# For an example, please see the documentation of the wersimtext function
 }
 \keyword{error}
 \keyword{rate}

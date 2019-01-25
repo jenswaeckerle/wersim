@@ -41,7 +41,14 @@ A data frame with the grouping variable in column 1 and simulated quantities (se
 This function calculates the word error rate between a hypothesis and a reference corpus.
 }
 \examples{
-wersimtext()
+library(RecordLinkage)
+library(quanteda)
+library(wersim)
+corp=corpus(data_corpus_dailnoconf1991)
+dfm_corp=dfm(corp,groups="party")
+wordfish_pos=austin::wordfish(quanteda::as.wfm(dfm_corp))
+wordfish_pos_res=data.frame("theta"=wordfish_pos$theta,"party"=wordfish_pos$docs)
+wersimulated_positions=wersimtext(corp,measured_wer=0,new_wer=0.05,deletions_sim=0.13,insertions_sim=0.22,substitutions_sim=0.65,num_sims=5,method="wordfish",groupingvar_sim="party")
 }
 \keyword{error}
 \keyword{rate}
