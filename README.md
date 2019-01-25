@@ -4,6 +4,8 @@ The wersim package enables researchers to measure word error in documents by com
 
 The package also provides the "wersim" and "wersimtext" functions that let researchers add additional word error to the corpus (through wersim) and then run text models such as Wordfish and sentiment dictionaries on that corpus (with wersimtext).
 
+You can install the package via: devtools::install_github("jenswaeckerle/wersim") in R
+
 For details on how to use the functions, please see the function documentations. For a general overview of this project, please see the paper in Political Analysis on which this package is built. It explains why automated transcriptions can be used, how they generally compare to human transcriptions and how wersim provides a way for researchers to test automated transcriptions:
 
 Proksch, S.,  Wratil, C.,  and Wäckerle, J., 2018, Testing the Validity of Automatic Speech Recognition for Political Text Analysis. Political Analysis, forthcoming.
